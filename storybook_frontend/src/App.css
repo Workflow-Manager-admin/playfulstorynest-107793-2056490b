@@ -1,0 +1,62 @@
+:root {
+  --primary: #FFD600;
+  --secondary: #87E9FF;
+  --accent: #FF6F61;
+  --board: #FFFEEB;
+  --nav: #FFF8CC;
+  --text: #222c3d;
+  --font-main: 'Fredoka One', 'Comic Sans MS', 'Baloo 2', sans-serif;
+}
+
+body,
+.App {
+  background: var(--secondary);
+  font-family: var(--font-main), sans-serif;
+  margin: 0; padding: 0;
+}
+
+.storybook-navbar {
+  font-family: var(--font-main), sans-serif;
+  font-size: 1.1em;
+}
+
+.story-viewport {
+  transition: box-shadow 0.2s, background 0.4s;
+}
+
+.story-title {
+  font-family: var(--font-main), sans-serif;
+}
+
+.input-userid {
+  outline: none;
+  font-family: var(--font-main), sans-serif;
+}
+.input-userid:focus {
+  box-shadow: 0 0 0 4px #FFD60044;
+}
+
+.story-btn {
+  transition: filter 0.12s, background 0.16s;
+}
+.story-btn:active {
+  filter: brightness(0.95);
+}
+
+.bunny-character {
+  will-change: transform;
+}
+
+.character-label {
+  margin-top: 0.25em;
+  font-family: var(--font-main), sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 430px) {
+  .storybook-navbar { font-size: .99em; }
+  .story-viewport { max-width: 100vw; min-width: 0; border-radius: 11px; }
+  .start-form { padding: 0.7em 0.1em 0.7em 0.1em; }
+}
+
+::-webkit-scrollbar { width: 0; height: 0;}
