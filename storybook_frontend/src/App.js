@@ -28,11 +28,15 @@ const COLORS = {
 /**
  * Demo, hardcoded Story Data
  */
+/**
+ * Simple playful storybook with at least 15 cheerful chapters.
+ * No fancy overlays, toasts, or advanced UX—just fun & basic navigation.
+ */
 const STORY = [
   {
     id: 0,
-    title: "Welcome to Jellybean Jungle",
-    text: "Once upon a time in the Jellybean Jungle, all the animals loved to play! Today, Bouncy the Bunny wants to show you around.",
+    title: "Welcome to Jellybean Jungle!",
+    text: "Once upon a time in the Jellybean Jungle, all the animal friends woke up to a very sunny day.",
     character: {
       name: "Bouncy Bunny",
       type: "bunny",
@@ -42,8 +46,8 @@ const STORY = [
   },
   {
     id: 1,
-    title: "Bouncy’s Special Trick",
-    text: "Bouncy can hop higher than any bunny in Jellybean Jungle! Tap Bouncy to see him bounce and wave hello!",
+    title: "Meet Bouncy Bunny",
+    text: "Bouncy Bunny loves to hop and play in the fields of colorful jellybeans. He is your new guide!",
     character: {
       name: "Bouncy Bunny",
       type: "bunny",
@@ -53,8 +57,8 @@ const STORY = [
   },
   {
     id: 2,
-    title: "Through the Lollipop Field",
-    text: "The next day, Bouncy brought you to the rainbow lollipop fields. Tap Bouncy along the path and see what happens!",
+    title: "Rainbow Parade",
+    text: "Today is the Rainbow Parade! Tap Bouncy to make him join the parade with a happy hop.",
     character: {
       name: "Bouncy Bunny",
       type: "bunny",
@@ -64,15 +68,136 @@ const STORY = [
   },
   {
     id: 3,
-    title: "The End",
-    text: "Thanks for exploring Jellybean Jungle with us. Come back anytime for more adventures. Bye-bye from Bouncy!",
+    title: "In the Candy Forest",
+    text: "The Candy Forest is filled with giggles. Bouncy meets Sally Squirrel. Sally loves acorn pancakes.",
+    character: {
+      name: "Sally Squirrel",
+      type: "squirrel",
+      color: COLORS.pink,
+    },
+    art: "bunny"
+  },
+  {
+    id: 4,
+    title: "Time for Hide and Seek",
+    text: "Bouncy and Sally play hide and seek among the big, swirly lollipops. Where is Sally hiding?",
+    character: {
+      name: "Sally Squirrel",
+      type: "squirrel",
+      color: COLORS.pink,
+    },
+    art: "bunny"
+  },
+  {
+    id: 5,
+    title: "Bouncy Finds a Treasure",
+    text: "Behind a jelly bush, Bouncy finds a shiny golden acorn! 'Wow!' says Sally. What could it be?",
     character: {
       name: "Bouncy Bunny",
       type: "bunny",
       color: COLORS.accent,
     },
     art: "bunny"
-  }
+  },
+  {
+    id: 6,
+    title: "Who Likes Carrots?",
+    text: "Bouncy and Sally meet Percy Parrot, who tells silly carrot jokes and makes everyone laugh.",
+    character: {
+      name: "Percy Parrot",
+      type: "parrot",
+      color: COLORS.yellow,
+    },
+    art: "bunny"
+  },
+  {
+    id: 7,
+    title: "A Marshmallow Mountain",
+    text: "The friends climb Marshmallow Mountain. It's soft and squishy and smells like vanilla.",
+    character: {
+      name: "Bouncy Bunny",
+      type: "bunny",
+      color: COLORS.accent,
+    },
+    art: "bunny"
+  },
+  {
+    id: 8,
+    title: "Star Sprinkles!",
+    text: "Suddenly, tiny star sprinkles start falling from the sky. Everyone catches them on their tongues—yum!",
+    character: {
+      name: "Percy Parrot",
+      type: "parrot",
+      color: COLORS.yellow,
+    },
+    art: "bunny"
+  },
+  {
+    id: 9,
+    title: "Build a Fort",
+    text: "They build a fort out of rainbow blocks. Even more friends join—Tina Turtle and Benny Bear!",
+    character: {
+      name: "Tina Turtle",
+      type: "turtle",
+      color: COLORS.green,
+    },
+    art: "bunny"
+  },
+  {
+    id: 10,
+    title: "Snack Time!",
+    text: "Inside the block fort, they share tasty snacks and tell their silliest knock-knock jokes.",
+    character: {
+      name: "Benny Bear",
+      type: "bear",
+      color: COLORS.purple,
+    },
+    art: "bunny"
+  },
+  {
+    id: 11,
+    title: "Bubble Trouble",
+    text: "Percy blows bubbles so big, even Bouncy gets caught inside one! Tap to make him bounce out.",
+    character: {
+      name: "Percy Parrot",
+      type: "parrot",
+      color: COLORS.yellow,
+    },
+    art: "bunny"
+  },
+  {
+    id: 12,
+    title: "The Silly Race",
+    text: "Now it’s time for a race—on jellybean scooters! Who do you think will win?",
+    character: {
+      name: "Bouncy Bunny",
+      type: "bunny",
+      color: COLORS.accent,
+    },
+    art: "bunny"
+  },
+  {
+    id: 13,
+    title: "Sweet Goodbyes",
+    text: "As the sun sets, the friends gather for one last group hug. Bouncy winks at you and waves goodbye.",
+    character: {
+      name: "Bouncy Bunny",
+      type: "bunny",
+      color: COLORS.accent,
+    },
+    art: "bunny"
+  },
+  {
+    id: 14,
+    title: "The End — Until Next Time!",
+    text: "Thanks for reading with Bouncy and all his friends! Come back soon for a new adventure in Jellybean Jungle.",
+    character: {
+      name: "Bouncy Bunny",
+      type: "bunny",
+      color: COLORS.accent,
+    },
+    art: "bunny"
+  },
 ];
 
 const SUPABASE_URL = "https://krgthvlsqcyehlczelp.supabase.co";
