@@ -1,31 +1,39 @@
 :root {
-  --primary: #FFD600;
-  --secondary: #87E9FF;
+  --yellow: #FFD600;
+  --blue: #87E9FF;
+  --pink: #FF8DAC;
+  --purple: #B197FC;
   --accent: #FF6F61;
   --board: #FFFEEB;
   --nav: #FFF8CC;
-  --text: #222c3d;
-  --font-main: 'Fredoka One', 'Comic Sans MS', 'Baloo 2', sans-serif;
+  --progress: #FFC55C;
+  --green: #A6F3A6;
+  --bubble: #FFFFFF;
+  --text: #314259;
+  --font-main: 'Fredoka', 'Baloo 2', 'Comic Neue', 'Comic Sans MS', sans-serif;
 }
 
 body,
 .App {
-  background: var(--secondary);
+  background: var(--blue);
   font-family: var(--font-main), sans-serif;
   margin: 0; padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .storybook-navbar {
   font-family: var(--font-main), sans-serif;
-  font-size: 1.1em;
+  font-size: 1.09em;
+  border-bottom: none;
 }
-
-.story-viewport {
-  transition: box-shadow 0.2s, background 0.4s;
+.story-viewport, .story-card {
+  transition: box-shadow 0.26s cubic-bezier(.13,1.2,.66,1), background .3s cubic-bezier(.77,.12,.3,1.22);
 }
 
 .story-title {
   font-family: var(--font-main), sans-serif;
+  letter-spacing: 0.012em;
 }
 
 .input-userid {
@@ -33,30 +41,88 @@ body,
   font-family: var(--font-main), sans-serif;
 }
 .input-userid:focus {
-  box-shadow: 0 0 0 4px #FFD60044;
+  box-shadow: 0 0 0 5px #FFD60044;
 }
 
-.story-btn {
-  transition: filter 0.12s, background 0.16s;
+.story-btn, .nav-btn, .start-btn-animated {
+  transition: filter 0.1s, background 0.15s, box-shadow .18s;
+  font-family: var(--font-main), sans-serif;
+  border-radius: 19px;
+  box-shadow: 0 2px 14px #ffd2e733;
 }
-.story-btn:active {
+.story-btn:active,
+.nav-btn:active,
+.start-btn-animated:active {
   filter: brightness(0.95);
+  box-shadow: 0 1px 7px #ffd2e722;
 }
 
-.bunny-character {
+.nav-btn { margin: 0 0.2em;}
+
+.bunny-character, .bunny-character-outer {
   will-change: transform;
+  touch-action: manipulation;
 }
 
 .character-label {
-  margin-top: 0.25em;
+  margin-top: 0.21em;
   font-family: var(--font-main), sans-serif;
   text-align: center;
 }
 
-@media (max-width: 430px) {
-  .storybook-navbar { font-size: .99em; }
-  .story-viewport { max-width: 100vw; min-width: 0; border-radius: 11px; }
-  .start-form { padding: 0.7em 0.1em 0.7em 0.1em; }
+.story-progress-chip {
+  box-shadow: 0 1px 5px #ffe47788;
+}
+
+.speech-bubble-outer {
+  filter: drop-shadow(0 2px 12px #f1e8ff37);
+  margin-bottom: 1.01em;
+}
+
+.start-btn-animated {
+  transition: box-shadow 0.25s cubic-bezier(.23,1.4,.33,1), transform .20s cubic-bezier(.6,2,.26,1);
+}
+
+.progress-bar {
+  background: #fff;
+  border-radius: 8px;
+  height: 9px;
+  margin: 0 0 2.1em 0;
+}
+
+.progress-bar-inner {
+  border-radius: 8px;
+  height: 100%;
+}
+
+.story-toast {
+  pointer-events: none;
+  min-width: 122px;
+  font-family: var(--font-main), sans-serif;
+}
+
+.story-footer {
+  border: none;
+}
+
+.floating-home-btn {
+  animation: floatButtonPopIn .51s cubic-bezier(.32,1.4,.52,1) 1;
+}
+
+/* Animations, fade-in etc. */
+@keyframes fadeInCard {
+  0% { opacity: 0; transform: scale(0.97) translateY(17px);}
+  100% { opacity: 1; transform: scale(1) translateY(0);}
+}
+
+@media (max-width: 530px) {
+  .storybook-navbar { font-size: 0.99em; }
+  .story-card { max-width: 99vw; border-radius: 13px; }
+  .character-label { font-size: 1.04em !important; }
+  .start-form { padding: 1.14em 0.09em 1.5em 0.09em; font-size: 1em;}
+  .input-userid { font-size: 1em; min-width: 118px;}
+  .story-btn, .nav-btn { padding: 0.99em 1.7em; font-size: 1em;}
+  .floating-home-btn { width:49px; height: 49px; font-size: 1.7em;}
 }
 
 ::-webkit-scrollbar { width: 0; height: 0;}
